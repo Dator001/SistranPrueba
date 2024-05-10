@@ -1,0 +1,84 @@
+<mat-card style="width: 100%; margin: 50%px auto;">
+
+    <mat-card-header></mat-card-header>
+    <mat-card-title><p>Lista Clientes</p></mat-card-title>
+    <mat-card-content>
+        <button mat-flat-button color="primary"(click)="nuevo()">Nuevo cliente</button>
+
+        <table mat-table [dataSource]="listaCliente" class="mat-elevation-z10" style="margin-top:20px;">
+
+            <ng-container matColumnDef="nombre">
+              <th mat-header-cell *matHeaderCellDef> Nombre</th>
+              <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+            </ng-container>
+          
+            
+            <ng-container matColumnDef="apellido">
+              <th mat-header-cell *matHeaderCellDef> Apellido</th>
+              <td mat-cell *matCellDef="let element"> {{element.apellido}} </td>
+            </ng-container>
+          
+            
+            <ng-container matColumnDef="numeroDocumento">
+              <th mat-header-cell *matHeaderCellDef> Numero De Documento</th>
+              <td mat-cell *matCellDef="let element"> {{element.numeroDocumento}} </td>
+            </ng-container>
+          
+           
+            <ng-container matColumnDef="fechaNaciomiento">
+              <th mat-header-cell *matHeaderCellDef> Fecha de nacimiento </th>
+              <td mat-cell *matCellDef="let element"> {{element.fechaNaciomiento}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="telefono1">
+                <th mat-header-cell *matHeaderCellDef> Celular </th>
+                <td mat-cell *matCellDef="let element"> {{element.telefono1}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="telefono2">
+                <th mat-header-cell *matHeaderCellDef> Telefono </th>
+                <td mat-cell *matCellDef="let element"> {{element.telefono2}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="correo1">
+                <th mat-header-cell *matHeaderCellDef> E-MAIL </th>
+                <td mat-cell *matCellDef="let element"> {{element.correo1}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="correo2">
+                <th mat-header-cell *matHeaderCellDef> Segundo Correo </th>
+                <td mat-cell *matCellDef="let element"> {{element.correo2}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="nombreCiudad">
+                <th mat-header-cell *matHeaderCellDef> Ciudad </th>
+                <td mat-cell *matCellDef="let element"> {{element.nombreCiudad}} </td>
+              </ng-container>
+          
+              <ng-container matColumnDef="direccion1">
+                <th mat-header-cell *matHeaderCellDef> Direccion Principal </th>
+                <td mat-cell *matCellDef="let element"> {{element.direccion1}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="direccion2">
+                <th mat-header-cell *matHeaderCellDef> Direccion Secundaria </th>
+                <td mat-cell *matCellDef="let element"> {{element.direccion2}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="accion">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let element"> 
+                    <button mat-icon-button color="primary" (click)="editar(element)">
+                        <mat-icon>edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn" (click)="eliminar(element)">
+                        <mat-icon>delete</mat-icon>
+                    </button>
+                </td>
+              </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColummns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColummns;"></tr>
+          </table>
+    </mat-card-content>
+  </mat-card>

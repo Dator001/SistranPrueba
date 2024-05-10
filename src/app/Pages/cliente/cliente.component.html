@@ -1,0 +1,87 @@
+<div class="mat-elevation-z2" style="width: 30%; padding: 30px; margin: 50px auto; display: flex; justify-content: center;">
+<form [formGroup]="formCliente">
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Nombre</mat-label>
+            <input matInput type="text" formControlName="nombre">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Apellido</mat-label>
+            <input matInput type="text" formControlName="apellido">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Identificado de Tipo Documento</mat-label>
+            <input matInput type="number" formControlName="idTipoDocumento">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Numero Documento</mat-label>
+            <input matInput type="text" formControlName="numeroDocumento">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput type="text" formControlName="fechaNaciomiento">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Celular</mat-label>
+            <input matInput type="text" formControlName="telefono1">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Telefono fijo</mat-label>
+            <input matInput type="text" formControlName="telefono2">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="correo1">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Email Secundario</mat-label>
+            <input matInput type="email" formControlName="correo2">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Id Ciudad</mat-label>
+            <input matInput type="number" formControlName="idCiudad">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Ciudad</mat-label>
+            <input matInput type="text" formControlName="nombreCiudad">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Direccion Principal</mat-label>
+            <input matInput type="text" formControlName="direccion1">
+          </mat-form-field>
+    </div>
+    <div class="flex">
+        <mat-form-field >
+            <mat-label>Direccion Secundaria</mat-label>
+            <input matInput type="text" formControlName="direccion2">
+          </mat-form-field>
+    </div>
+
+    <div class="flex">
+        <button mat-flat-button color="primary" (click)="guardar()" >Guardar</button>
+        <button mat-flat-button color="primary" (click)="volver()" style="margin-left: 8px;">Volver</button>
+    </div>
+</form>
+</div>
